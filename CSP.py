@@ -47,9 +47,21 @@ def is_complete_assignment(assignment, csp):
 # Checks whether the current assignment is consistent with the constraints of the problem
 def is_consistent(csp, value, assignment, var):
     # loop through the constraints
-    for constraint
+    for key in assignment.keys:
+        key_value = assignment[key]
+        key_constraint = None
+        val = None
+        if key < var:
+            key_constraint = (key, var)
+            val = (key_value, value)
+        else:
+            key_constraint = (var, key)
+            val = (value, key_value)
 
+        if val not in csp.constraints[key_constraint]:
+            return False
 
+    return True
 
 # Selects an unassigned variable from the CSP
 def select_unassigned_variable(csp, assignment):
