@@ -2,41 +2,26 @@
 # Authors: Sudharsan Balasubramani & Alberto
 # Collaborated with: James Fleming
 
-import copy
+# Import general CSP class to inherit.
+from GeneralCSP import GeneralCSP
 
 
 # Class that handles the Map-coloring constraint-satisfaction problem.
-class MapColoringCSP:
+class MapColoringCSP(GeneralCSP):
 
     # Constructor for the Map Coloring CSP. Accepts a set of Vars, Domains, and Implicit Constraints
-    # These implicit constraints will be turned into explicit later on
+    # These implicit constraints will be turned into explicit later on. Inherits the super constructor but
+    # generates its own explicit constraints based on the type of problem it is.
     def __init__(self, variables, domains, constraints, mrv=False, degree=False, lcv=False, inference=False):
-        # initialize all variables
-        self.variables = variables
-        self.domains = copy.deepcopy(domains)
-        self.working_domains = copy.deepcopy(domains)
-        self.implicit_constraints = constraints
+
+        super().__init__(variables, domains, constraints, mrv, degree, lcv, inference)
         self.constraints = self.generate_explicit_constraints(constraints)
-
-        # Heuristics
-        self.mrv = mrv
-        self.lcv = lcv
-        self.neighbors = self.get_neighbors()
-        self.degree = degree
-        if self.degree:
-            self.degree_dictionary = self.get_degrees()
-
-        self.inference = inference
-        if self.inference:
-            self.arcs = self.generate_arcs()
-        self.backtrack_calls = 0
-        self.max_domain_len = self.max_domain_len()
 
     # Generates the explicit constraints. For example, if SA does not equal Queensland, we generate all the
     # possible options that this pair could take on.
     def generate_explicit_constraints(self, constraints):
         explicit_constraints = {}
-        # For a given tuple of explicit constraints, generate the explicit constraints associated with
+        # For a given tuple of implicit constraints, generate the explicit constraints associated with
         for constraint in constraints:
             # Tuples have to be in order so that we don't mix up the relation between 0,1 and 1,0
             # These are just variable number indices
@@ -55,41 +40,12 @@ class MapColoringCSP:
         # Return this new constraint dictionary
         return explicit_constraints
 
-    # For the degree heuristic, create a dictionary of degrees
-    def get_degrees(self):
-        degree_dictionary = dict.fromkeys(range(len(self.variables)), 0)
-        for constraint in self.implicit_constraints:
-            degree_dictionary[constraint[0]] += 1
-            degree_dictionary[constraint[1]] += 1
-        return degree_dictionary
-
-    # For LCV, create a dictionary of neighbors
-    def get_neighbors(self):
-        neighbor_dictionary = {x: set() for x in range(len(self.variables))}
-        for constraint in self.implicit_constraints:
-            neighbor_dictionary[constraint[0]].add(constraint[1])
-            neighbor_dictionary[constraint[1]].add(constraint[0])
-        return neighbor_dictionary
-
-    # For Arc Consistency, arc generation
-    def generate_arcs(self):
-        arcs = []
-        for key in self.neighbors.keys():
-            arcs.extend(self.get_arcs(key))
-        return arcs
-
-    def get_arcs(self, key):
-        key_arcs = []
-        for neighbor in self.neighbors[key]:
-            key_arcs.append((neighbor, key))
-        return key_arcs
-
-    # Returns the maximum length of domain to use for mrv
-    def max_domain_len(self):
-        max_len = 0
-        for key in self.domains.keys():
-            max_len = max(max_len, len(self.domains[key]))
-        return max_len
+    # Print out the colors associated in assignment
+    def print_assignment(self, assignment, var_dictionary, value_dictionary):
+        return_string = ''
+        for key in assignment.keys():
+            return_string += var_dictionary[key] + ':' + value_dictionary[assignment[key]] + ' '
+        return return_string
 
 
 # A bit of test code. You might want to add to it to verify that things
@@ -104,6 +60,6 @@ if __name__ == "__main__":
     d = {0: [0, 1, 2], 1: [0, 1, 2], 2: [0, 1, 2], 3: [0, 1, 2], 4: [0, 1, 2], 5: [0, 1, 2], 6: [0, 1, 2]}
     c = [(0, 1), (0, 5), (1, 2), (1, 5), (2, 3), (2, 5), (3, 5), (3, 4), (4, 5)]
 
-    # Now we create a MapColoringCSP. Fingers crossed this works
+    # Now we create a MapColoringCSP. Fingers crossed this works. Test if constraint generation works.
     mapCSP = MapColoringCSP(v, d, c, False)
     print(mapCSP.constraints)

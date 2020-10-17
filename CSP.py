@@ -1,16 +1,18 @@
 # CS 76: Artificial Intelligence - PA4:CSP
+# Fall 2020
 # Authors: Sudharsan Balasubramani & Alberto
-# Collaborated with: James Fleming
+# Collaboration: Discussed ideas with James Fleming
 
-# Houses the algorithms for CSP
+# Library of Functions for solving CSP problems. Mainly backtracking and friends
 
+# Backtracking algorithm that provides an empty assignment dictionary, a fringe of sorts
 def backtracking_search(csp):
     return backtrack({}, csp)
 
 
+# The backtracking algorithm, similar to dfs. Takes in an assignment and the associated CSP
 def backtrack(assignment, csp):
-    # Increment num of backtrack calls
-    csp.backtrack_calls += 1
+
     # First check if this is a complete assignment, then return the assignment
     if is_complete_assignment(assignment, csp):
         return assignment
@@ -20,10 +22,11 @@ def backtrack(assignment, csp):
 
     # Then for all values in the domain of that variable, try to find a solution. If inconsistency is detected, then
     # that is a failure, so we move back to try another value
-    for value in order_domain_values(var, assignment, csp):
+    for value in order_domain_values(var, csp):
         if is_consistent(csp, value, assignment, var):
             # If we are consistent, then add to our assignment
             add_to_assignment(assignment, var, value, csp)
+            # If we have arc consistency inference turned on
             if csp.inference:
                 inf_bool, inferences = inference(csp, assignment)
                 if inf_bool:
@@ -34,14 +37,14 @@ def backtrack(assignment, csp):
                     # if result returns something at all, return it
                     if result is not None:
                         return result
-                remove_from_assignment(assignment, var, value, csp, inferences)
+                # Remove assignments and inferences if failure
+                remove_from_assignment(assignment, var, csp, inferences)
             else:
                 result = backtrack(assignment, csp)
                 # if result returns something at all, return it
                 if result is not None:
                     return result
-                remove_from_assignment(assignment, var, value, csp)
-
+                remove_from_assignment(assignment, var, csp)
     return None
 
 
@@ -53,6 +56,7 @@ def is_complete_assignment(assignment, csp):
 # Checks whether the current assignment is consistent with the constraints of the problem
 def is_consistent(csp, value, assignment, var):
     # loop through the constraints
+    csp.is_consistent_checks += 1
     for key in assignment.keys():
         key_value = assignment[key]
 
@@ -65,9 +69,9 @@ def is_consistent(csp, value, assignment, var):
             key_constraint = (var, key)
             val = (value, key_value)
 
+        # If anything shows up to be not in our constraints, we return false.
         if key_constraint in csp.constraints.keys() and val not in csp.constraints[key_constraint]:
             return False
-
     return True
 
 
@@ -102,10 +106,11 @@ def select_unassigned_variable(csp, assignment):
 
 
 # Orders the domain values based on heuristic if heuristic is provided.
-def order_domain_values(var, assignment, csp):
+def order_domain_values(var, csp):
 
     # If using the least constraining value heuristic, then we have to order in a way such that the value that is
     # is selected is the variable that will constrain others the least.
+    # The sorting function for order domain values
     def lcv_func(value):
         num_constraining = 0
         for neighbor in neighbors:
@@ -128,7 +133,7 @@ def add_to_assignment(assignment, var, value, csp):
 
 
 # Remove from assignment, reset the domain of the var
-def remove_from_assignment(assignment, var, value, csp, inferences=None):
+def remove_from_assignment(assignment, var, csp, inferences=None):
     # Delete the assignment
     del assignment[var]
     # Reset domain
@@ -141,8 +146,8 @@ def remove_from_assignment(assignment, var, value, csp, inferences=None):
             csp.working_domains[var] = csp.domains[var]
 
 
-# inferences via arc consistency. Will check if we can manipulate the domain and if so, return a list of additions where
-# the domain is just one.
+# Inferences via arc consistency. Will check if we can manipulate the domain and if so, return a list of additions where
+# the domain is just one. (AC-3)
 def inference(csp, assignment):
     # The AC-3 algorithm
     # Initial queue of arcs
@@ -171,6 +176,7 @@ def inference(csp, assignment):
 def revise(csp, xi, xj):
     key_constraint = (min(xi, xj), max(xi, xj))
     revised = False
+    # Check if there is a way to satisfy. If not, then delete it.
     for x in csp.working_domains[xi]:
         satisfy = False
         for y in csp.working_domains[xj]:

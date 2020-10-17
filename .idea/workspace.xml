@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeea21ec-9bc6-4375-baa7-a5a961e93064" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MapColoringCSP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapColoringTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AI_CSP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI_CSP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CircuitBoardTesting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeneralCSP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapColoringTesting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CircuitBoardCSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/CircuitBoardCSP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapColoringCSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/MapColoringCSP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MapColoringTest.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +54,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AI_Maze" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.MapColoringTest">
-    <configuration name="CSP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sudha\PycharmProjects\AI_CSP" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.CircuitBoardTesting">
+    <configuration name="CircuitBoardTesting (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI_CSP" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,7 +75,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CSP.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CircuitBoardTesting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CircuitBoardTesting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AI_CSP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sudha\PycharmProjects\AI_CSP\CircuitBoardTesting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MapColoringTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="MapColoringTesting (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AI_CSP" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -108,7 +138,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MapColoringTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MapColoringTesting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MapColoringTesting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AI_CSP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sudha\PycharmProjects\AI_CSP\MapColoringTesting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MapColoringTesting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AI_CSP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sudha\PycharmProjects\AI_CSP\MapColoringTesting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,9 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.MapColoringTest" />
+        <item itemvalue="Python.CircuitBoardTesting (1)" />
+        <item itemvalue="Python.MapColoringTesting (1)" />
         <item itemvalue="Python.MapColoringCSP" />
-        <item itemvalue="Python.CSP" />
+        <item itemvalue="Python.CircuitBoardTesting" />
+        <item itemvalue="Python.MapColoringTesting" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +223,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602775914815">
@@ -159,65 +234,57 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602789930914" />
+    <state x="543" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602965015316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="543" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602965015316" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602789936101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602789936101" />
-    <state width="1899" height="339" key="GridCell.Tab.0.bottom" timestamp="1602831465894">
+    <state width="1049" height="297" key="GridCell.Tab.0.bottom" timestamp="1602972751383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state width="1899" height="339" key="GridCell.Tab.0.center" timestamp="1602831465894">
+    <state width="1049" height="297" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602972751383" />
+    <state width="1049" height="297" key="GridCell.Tab.0.center" timestamp="1602972751383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state width="1899" height="339" key="GridCell.Tab.0.left" timestamp="1602831465894">
+    <state width="1049" height="297" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602972751383" />
+    <state width="1049" height="297" key="GridCell.Tab.0.left" timestamp="1602972751382">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state width="1899" height="339" key="GridCell.Tab.0.right" timestamp="1602831465894">
+    <state width="1049" height="297" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602972751382" />
+    <state width="1049" height="297" key="GridCell.Tab.0.right" timestamp="1602972751383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state width="1899" height="339" key="GridCell.Tab.1.bottom" timestamp="1602831465894">
+    <state width="1049" height="297" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602972751383" />
+    <state width="1899" height="338" key="GridCell.Tab.1.bottom" timestamp="1602964504005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state width="1899" height="339" key="GridCell.Tab.1.center" timestamp="1602831465894">
+    <state width="1899" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602964504005" />
+    <state width="1899" height="338" key="GridCell.Tab.1.center" timestamp="1602964504005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state width="1899" height="339" key="GridCell.Tab.1.left" timestamp="1602831465894">
+    <state width="1899" height="338" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602964504005" />
+    <state width="1899" height="338" key="GridCell.Tab.1.left" timestamp="1602964504005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state width="1899" height="339" key="GridCell.Tab.1.right" timestamp="1602831465894">
+    <state width="1899" height="338" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602964504005" />
+    <state width="1899" height="338" key="GridCell.Tab.1.right" timestamp="1602964504005">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="339" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602831465894" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1602775907653">
+    <state width="1899" height="338" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602964504005" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1602880301954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602775907653" />
-    <state x="143" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602790998781">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602880301954" />
+    <state x="785" y="305" key="refactoring.ChangeSignatureDialog" timestamp="1602882321454">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="143" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602790998781" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MapColoringTest.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MapColoringTest.py</url>
-          <line>73</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="785" y="305" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602882321454" />
+    <state x="143" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602962202370">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="143" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602962202370" />
   </component>
 </project>
